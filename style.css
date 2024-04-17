@@ -139,7 +139,7 @@ body {
 
 .component {
   display: grid;
-  max-width: 375px;
+  max-width: 350px;
   margin-inline: auto;
 }
 
@@ -235,6 +235,18 @@ body {
   font-weight: 700;
 }
 
+.btn {
+  padding: 15px;
+  border-radius: 22px;
+  background-color: rgba(10, 10, 45, 0.856);
+  width: 100%;
+  color: var(--pale-blue);
+  font-size: 18px;
+  font-weight: 700;
+  font-family: var(--font-family-hanken-grostek);
+  margin-block-start: 8px;
+}
+
 /*=========Media queries=========*/
 
 @media (min-width: 992px) {
@@ -245,14 +257,24 @@ body {
   }
 
   .component {
-    max-width:700px;
-    grid-template-columns:1fr 1.3fr;
+    max-width: 700px;
+    grid-template-columns: 1fr 1.3fr;
+  }
+
+  .marks-box {
+    width: 160px;
+    height: 160px;
+  }
+
+  .total-marks {
+    font-size: 45px;
   }
 
   .result-summary {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    padding-inline-start: 40px;
+    padding-inline-start: 60px;
+    padding-inline-end: 40px;
   }
 
   .result {
