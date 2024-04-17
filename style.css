@@ -1,0 +1,262 @@
+/*============Google font link============*/
+
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Alata&family=Arvo:wght@700&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Commissioner:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:wght@400;700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Lora&family=Manrope:wght@200..800&family=Merriweather:wght@300&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@400;800&family=Overpass:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:wght@500;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Preahvihear&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Text:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*=========================Custom Properties========================*/
+
+:root {
+  /*=======Colors=========*/
+
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+
+  /*====Gradient marks======*/
+
+  --clr-primary-hsl-500: 256, 72%, 46%;
+  --clr-secondary-hsl-500: 241, 72%, 46%;
+
+  --clr-primary-500: hsla(var(--clr-primary-hsl-500));
+
+  --gradient-to-transparent: linear-gradient(
+    var(--clr-primary-500),
+    hsl(var(--clr-secondary-hsl-500), 0)
+  );
+
+  /*=====Typography=====*/
+
+  --font-family-hanken-grostek: "Hanken Grotesk", sans-serif;
+}
+
+/*=========================Reset===========================*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+a,
+input {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+button,
+input {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+  scrollbar-width: thin;
+}
+
+body {
+  font-family: var(--font-family-hanken-grostek);
+  height: 100vh;
+}
+
+/*=========================Reused styles===========================*/
+
+.container {
+  padding: 20px 16px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+[data-bg-red-gradient] {
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+[data-bg-yellow-gradient] {
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+[data-bg-green-gradient] {
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+[data-bg-blue-gradient] {
+  background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+[data-clr-red] {
+  color: var(--light-red);
+}
+
+[data-clr-yellow] {
+  color: var(--orangey-yellow);
+}
+
+[data-clr-green] {
+  color: var(--green-teal);
+}
+
+[data-clr-blue] {
+  color: var(--cobalt-blue);
+}
+
+/*=========================Main styles===========================*/
+
+.component {
+  display: grid;
+  max-width: 375px;
+  margin-inline: auto;
+}
+
+.result {
+  background: linear-gradient(
+    to bottom,
+    var(--light-slate-blue),
+    var(--light-royal-blue)
+  );
+  padding: 25px 40px;
+  border-radius: 25px;
+}
+
+.result-title {
+  color: hsla(221, 100%, 96%, 0.9);
+}
+
+.marks-box {
+  display: grid;
+  place-content: center;
+  margin-inline: auto;
+  width: 120px;
+  height: 120px;
+  margin-block: 20px;
+  border-radius: 113px;
+  background: var(--gradient-to-transparent);
+}
+
+.total-marks {
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.marks-light {
+  color: hsla(221, 100%, 96%, 0.4);
+  font-weight: 600;
+}
+
+.remark {
+  color: var(--pale-blue);
+  font-weight: 600;
+}
+
+.remark-description {
+  color: hsla(221, 100%, 96%, 0.8);
+  margin-block: 10px;
+  font-weight: 600;
+}
+
+.result-summary {
+  background-color: var(--pale-blue);
+  padding: 20px 25px;
+  border-radius: 25px;
+}
+
+.summary-title {
+  color: rgb(10, 10, 57);
+}
+
+.summary-list {
+  display: grid;
+  gap: 20px;
+  margin-block: 20px;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.summary-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 12px;
+  border-radius: 12px;
+}
+
+.marks-scored {
+  color: rgb(10, 10, 57);
+  font-weight: 700;
+}
+
+.category-name {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.marks:not(.marks-scored) {
+  color: hsla(224, 30%, 27%, 0.5);
+  font-weight: 700;
+}
+
+/*=========Media queries=========*/
+
+@media (min-width: 992px) {
+  .container {
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .component {
+    max-width: 650px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .result-summary {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-inline-start: 40px;
+  }
+
+  .result {
+    position: relative;
+    left: 20px;
+  }
+}
